@@ -1,7 +1,7 @@
 {
     "name"             : "mamuz/mamuz-contact",
     "type"             : "library",
-    "description"      : "Provides simple contact form rendered by twitter-bootstrap view helper for ZF2 with Doctrine",
+    "description"      : "Modified by Vitali Korezki. Provides simple contact form rendered by twitter-bootstrap view helper for ZF2 with Doctrine",
     "homepage"         : "https://github.com/mamuz/MamuzContact",
     "license"          : "MIT",
     "keywords"         : ["mamuz", "contact", "form", "zf2", "twitter-bootstrap", "doctrine"],
@@ -9,12 +9,16 @@
         {
             "name" : "Marco Muths",
             "email": "muzzi_is@web.de"
+        },
+        {
+            "name" : "Vitali Korezki",
+            "email": "mail@vk-web.de"
         }
     ],
     "minimum-stability": "dev",
     "prefer-stable"    : true,
     "require"          : {
-        "php"                                : ">=5.4",
+        "php"                                : ">=5.3",
         "zendframework/zend-mvc"             : "~2.3",
         "zendframework/zend-servicemanager"  : "~2.3",
         "zendframework/zend-eventmanager"    : "~2.3",
