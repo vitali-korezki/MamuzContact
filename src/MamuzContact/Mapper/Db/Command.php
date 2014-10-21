@@ -10,7 +10,7 @@ use MamuzContact\Feature\CommandInterface;
 
 class Command implements CommandInterface
 {
-    use EventManagerAwareTrait;
+    // use EventManagerAwareTrait;
 
     /** @var ObjectManager */
     private $objectManager;
