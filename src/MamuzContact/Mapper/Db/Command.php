@@ -25,15 +25,19 @@ class Command implements CommandInterface
 
     public function persist(Contact $contact)
     {
-        $results = $this->trigger(Event::PRE_PERSISTENCE, array('contact' => $contact));
-        if ($results->stopped()) {
-            return $contact;
+        if (method_exists($this, 'trigger')) {
+            $results = $this->trigger(Event::PRE_PERSISTENCE, array('contact' => $contact));
+            if ($results->stopped()) {
+                return $contact;
+            }
         }
 
         $this->objectManager->persist($contact);
         $this->objectManager->flush();
 
-        $this->trigger(Event::POST_PERSISTENCE, array('contact' => $contact));
+        if (method_exists($this, 'trigger')) {
+            $this->trigger(Event::POST_PERSISTENCE, array('contact' => $contact));
+        }
 
         return $contact;
     }
